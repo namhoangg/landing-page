@@ -1,0 +1,681 @@
+{
+  "httpErrCodes": {
+    "400": "400 - Bad Request",
+    "401": "401 - Unauthorized",
+    "403": "403 - Forbidden",
+    "404": "404 - The requested resource does not exist",
+    "409": "409 - The requested conflicts with some rule already established",
+    "412": "412 - Precondition Failed",
+    "413": "413 - Request entity too large",
+    "422": "422 - Validation Error!",
+    "500": "500 - Internal Server Error",
+    "503": "503 - The requested service is not available"
+  },
+  "navigation": {
+    "home": "Home",
+    "services": {
+      "self": "Services",
+      "main": "Services",
+      "dc": "Digital Consulting",
+      "sd": "Custom Software Development",
+      "ddc": "Dedicated Development Center",
+      "sts": "Software Testing Services",
+      "solutions": "Solutions",
+      "industries": "Industries",
+      "resourcesCenter": "Resources Center"
+    },
+    "solutions": {
+      "self": "Solutions",
+      "main": "Solutions",
+      "hcm": "Human Capital Management",
+      "adas": "Advanced Driver - Assistance System"
+    },
+    "industries": {
+      "self": "Industries",
+      "main": "Industries",
+      "automotive": "Automotive",
+      "edutech": "Edutech",
+      "bankingFinance": "Banking & Finance",
+      "fintech": "Fintech",
+      "retails": "Retails",
+      "logistics": "Logistics",
+      "smartIot": "Smart IoT"
+    },
+    "resources": {
+      "self": "Resources",
+      "main": "Resources",
+      "caseStudies": "Case Studies",
+      "insights": "Insights",
+      "innovationHub": "Innovation Hub"
+    },
+    "support": {
+      "support": "Support",
+      "privacyPolicy": "Privacy Policy",
+      "isms": "ISMS",
+      "contactUs": "Contact Us",
+      "faqs": "FAQs"
+    },
+    "company": {
+      "self": "The Company",
+      "main": "The Company",
+      "about": "About FreightFlex",
+      "culture": "Our Culture",
+      "careers": "Ban Vien Careers",
+      "contact": "Contact Us",
+      "ourESG": "Our ESG",
+      "mediaCenter": {
+        "main": "Media Center",
+        "news": "News",
+        "events": "Events",
+        "gallery": "Gallery",
+        "text": {
+          "updateLatestNews": "Stay up-to-date with the latest news and updates from Ban Vien "
+        }
+      }
+    },
+    "career": "Careers",
+    "contact": "Contact Us",
+    "PrivacyPolicy": "Privacy Policy",
+    "TermOfUse": "Term of Use",
+    "isms": "ISMS",
+    "digital": "Digital Consulting",
+    "software": "Software Development",
+    "dedicated": "Dedicated Offshore Development",
+    "research": "Software Testing Services",
+    "automotive": "Automotive",
+    "banking": "Banking & Finance",
+    "education": "Education",
+    "retail": "Retail",
+    "computer": "Computer Network",
+    "newEvents": "News & Events",
+    "gallery": "Gallery",
+    "connectWithUs": "Connect With Us"
+  },
+  "pagination": {
+    "showTotal": "Showing {{ from }} - {{ to }} of {{ total }} items"
+  },
+  "lang": {
+    "english": "English",
+    "vietnamese": "Vietnamese"
+  },
+  "form": {
+    "required": "This field should not be blank!",
+    "errorFileSizeUpload": "Upload file size is too larger",
+    "errorNameFileUpload": "The file name is not in the correct format",
+    "errorFileNotSupport": "The file extension is not supported",
+    "errorInvalidEmail": "Please enter a valid email address",
+    "errorTimeEndGreaterTimeStart": "Time end must be greater than time start",
+    "atLeastOneContainer": "At least one container is required",
+    "mustBePositive": "Must be a positive number"
+  },
+  "button": {
+    "create": "Create",
+    "seeMore": "See more",
+    "loadMore": "Load more",
+    "goToHome": "Go to home",
+    "followUs": "Follow us",
+    "toGetHotJobFirst": "to get hot job first",
+    "search": "Search...",
+    "clearFilter": "Clear filter",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "submit": "Submit",
+    "ok": "OK",
+    "publish": "Publish",
+    "save&Draft": "Save & Draft",
+    "save&Preview": "Save & Preview",
+    "applyFilter": "Apply Filter",
+    "partnerWithUs": "Partner with Us",
+    "careerOppotunities": "Career Oppotunities",
+    "needSupport": "Need Support",
+    "addToMyCalendar": "Add to My Calendar",
+    "corporate_News": "Corporate News",
+    "blog": "Blog",
+    "recruitment_News": "Recruitment News",
+    "seeAll": "See All",
+    "login": "Login",
+    "copy": "Copy",
+    "copied": "Copied",
+    "saveDraft": "Save Draft",
+    "addNewCategory": "Add A New Category",
+    "addNewPortfolio": "Add A New Portfolio",
+    "hide": "Hide",
+    "deSelect": "Deselect ({{value}})",
+    "delete": "Delete",
+    "filter": "Filter",
+    "addNewPost": "Add A New Post",
+    "yes": "Yes",
+    "no": "No",
+    "addNewEvent": "Add A New Event",
+    "addNewTag": "Add A New Tag",
+    "sort": "Sort",
+    "apply": "Apply",
+    "back": "Back",
+    "chooseFiles": "Choose Files",
+    "upload": "Upload",
+    "EDIT": "Edit",
+    "DELETE": "Delete",
+    "SHARE": "Share",
+    "customizeColumn": "Customize Column",
+    "export": "Export",
+    "addLabel": "Add Label"
+  },
+  "text": {
+    "areYouSureYouWantToCancel": "Are you sure want to cancel?",
+    "chooseAFile": "Choose a file",
+    "orDropItHere": "or drop it here",
+    "subscribeForUpdatingOurLatestNews": "Subscribe for updating our latest news!",
+    "subscribeForMoreinsights": "Subscribe for more insights",
+    "weHelpBusinessesAroundTheGlobe": "Every day, we help businesses around the globe accelerate digital transformation and build a more resilient, sustainable and inclusive future."
+  },
+  "heading": {
+    "featuredEvents": "Featured Events",
+    "otherEvents": "Other Events",
+    "accompany": "Accompany",
+    "theFutureWithUs": "the future with us",
+    "hotline": "Hotline",
+    "connectWithUs": "Connect With Us",
+    "mediaEvents": "Media & Event",
+    "recruitment": "Recruitment",
+    "explore": "Explore",
+    "geography": "in specific geography",
+    "ourOffices": "our offices",
+    "locations": "Locations",
+    "customerService": "Customer Service"
+  },
+  "newPress": {
+    "corporate_News": "Corporate News",
+    "blog": "Blog",
+    "recruitment_News": "Recruitment News",
+    "title": "Our Newsroom",
+    "text_banner": "Stay up-to-date with the latest news and updates from Ban Vien"
+  },
+  "gallery": {
+    "textTitle": "Gallery",
+    "content": "[2022 COMPANY TRIP] THE MEMORABLE MOMENTS OF “BAN VIEN CREW”",
+    "linkTitle": "Social Share:"
+  },
+  "title": {
+    "topics": "Topics",
+    "youMightAlsoLike": "You might also like",
+    "sortBy": "Sort By",
+    "followUs": "Follow us"
+  },
+  "insight": {
+    "title": "How Artificial Intelligence Enhances Customer Experiences in Banking"
+  },
+  "category": {
+    "title": "Stay up-to-date with the latest news and updates from Ban Vien"
+  },
+  "admin": {
+    "categories": {
+      "location": "Location",
+      "title": "Categories",
+      "name": "Name",
+      "slug": "Slug",
+      "post": "Post",
+      "posts": "Posts",
+      "language": "Language",
+      "languages": "Languages",
+      "time": "Time",
+      "status": "Status",
+      "action": "Action",
+      "updateStateOK": "Update state successfully!",
+      "createOK": "Create new category successfully!",
+      "editOK": "Edit category successfully!",
+      "deleteOK": "Delete successfully!",
+      "shortDescription": "Short Description",
+      "createTitle": "Add a new category",
+      "editTitle": "Edit Category",
+      "enterName": "The name is how it appears on the website.",
+      "enterSlug": "The “slug” is the URL-friendly version of the name.",
+      "enterDescription": "The SEO description is brief text describing site content, ideally 50-300 characters long.",
+      "locations": {
+        "EVENT_LOCATION_UNSPECIFIED": "System",
+        "EVENT_LOCATION_NEWS_PRESS": "News & Press",
+        "EVENT_LOCATION_INSIGHTS": "Insights",
+        "EVENT_LOCATION_ESGS": "ESGs",
+        "EVENT_LOCATION_INNOVATION_HUB": "Innovation Hub",
+        "EVENT_LOCATION_EVENTS": "Events"
+      }
+    },
+    "post": {
+      "title": "Posts",
+      "subTitle": "At Ban Vien, our value lies in meaningful connections in every information we deliver.<br> Crafting impactful content, we embrace authenticity and compassion.",
+      "postTitle": "Title",
+      "category": "Category",
+      "location": "Location",
+      "tag": "Tag",
+      "author": "Author",
+      "language": "Language",
+      "time": "Time",
+      "status": "Status",
+      "action": "Action",
+      "createOK": "Create new post successfully!",
+      "editOK": "Edit post successfully!",
+      "deleteOK": "Delete post successfully!",
+      "updateStateOK": "Update state successfully!",
+      "statuses": {
+        "POST_STATE_PUBLIC": "Public",
+        "POST_STATE_DRAFT": "Draft",
+        "POST_STATE_PRIVATE": "Private",
+        "POST_STATE_DELETED": "Deleted"
+      },
+      "options": {
+        "1": "Newsroom",
+        "2": "Insights",
+        "3": "ESG",
+        "4": "Innovation Hub"
+      }
+    },
+    "events": {
+      "title": "All Events",
+      "postTitle": "Event Name",
+      "activity": "Activity",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "location": "Location",
+      "tag": "Tag",
+      "author": "Author",
+      "language": "Language",
+      "time": "Time",
+      "status": "Status",
+      "action": "Action",
+      "createOK": "Create new event successfully!",
+      "editOK": "Edit event successfully!",
+      "deleteOK": "Delete successfully!",
+      "updateStateOK": "Update state successfully!",
+      "statuses": {
+        "EVENT_STATE_PUBLIC": "Public",
+        "EVENT_STATE_DRAFT": "Draft",
+        "EVENT_STATE_PRIVATE": "Private",
+        "EVENT_STATE_DELETED": "Deleted"
+      },
+      "eventStatuses": {
+        "EVENT_STATUS_UPCOMING": "Upcoming",
+        "EVENT_STATUS_ONGOING": "Ongoing",
+        "EVENT_STATUS_CLOSED": "Closed"
+      }
+    },
+    "tags": {
+      "title": "Tags",
+      "name": "Name",
+      "slug": "Slug",
+      "result": "Result",
+      "time": "Time",
+      "highlight": "Highlight",
+      "createdBy": "Created by",
+      "createOK": "Create new tag successfully!",
+      "shortDescription": "Short Description",
+      "deleteOK": "Delete successfully!",
+      "createTitle": "Add a new tag",
+      "highlightOK": "Update highlight successfully!",
+      "enterName": "The name is how it appears on the website.",
+      "enterSlug": "The “slug” is the URL-friendly version of the name.",
+      "enterDescription": "The SEO description is brief text describing site content, ideally 50-300 characters long."
+    },
+    "portfolios": {
+      "title": "Category Portfolio",
+      "category": "Category",
+      "slug": "Slug",
+      "portfolio": "Portfolio",
+      "author": "Author",
+      "language": "Language",
+      "time": "Time",
+      "status": "Status",
+      "action": "Action",
+      "allPortfolio": "All Portfolio",
+      "tag": "Tag",
+      "name": "Name",
+      "type": "Type",
+      "updateStateOK": "Update status successfully!",
+      "createOK": "Add new category portfolio successfully!",
+      "editOK": "Edit category portfolio successfully!",
+      "deleteOK": "Delete category portfolio successfully!",
+      "languages": {
+        "ENGLISH": "English",
+        "VIETNAMESE": "Vietnamese"
+      },
+      "statuses": {
+        "PUBLISHED": "Public",
+        "HIDDEN": "Draft"
+      },
+      "option": {
+        "case_studies": "Case study",
+        "esg_report": "Esg report",
+        "innovation_hub": "Innovation hub",
+        "unspecified": "Unspecified",
+        "caseStudy": "Case study",
+        "esgReport": "Esg report",
+        "innovationHub": "Innovation hub",
+        "1": "Case Study",
+        "2": "ESG Report",
+        "3": "Innovation Hub"
+      }
+    },
+    "gallery": {
+      "title": {
+        "gallery": "Gallery",
+        "shareLink": "Share link",
+        "deleteAlbum": "Are you sure to delete this album?",
+        "addANewAlbum": "Add A New Album",
+        "editAlbum": "Edit Album",
+        "deleteImage": "Are you sure to delete this image?",
+        "createOK": "Create new album successfully!",
+        "updateOK": "Update album successfully!",
+        "deleteOK": "Delete album successfully!"
+      },
+      "button": {
+        "addANewAlbum": "Add A New Album"
+      },
+      "label": {
+        "sortBy": "Sort By",
+        "selectTheOrder": "Select The Order",
+        "timeCreated": "Time Created",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "name": "Name",
+        "albumCover": "Album cover",
+        "organizedBy": "Organized by",
+        "author": "Author",
+        "created": "Created",
+        "modifiedBy": "Modified by",
+        "lastUpdated": "Last updated",
+        "slug": "Slug"
+      },
+      "placeholder": {
+        "sortBy": "Sort By",
+        "select": "Select"
+      },
+      "option": {
+        "newestToOldest": "Newest To Oldest",
+        "oldestToNewest": "Oldest To Newest",
+        "aToZ": "A To Z",
+        "zToA": "Z To A",
+        "time": "Time",
+        "name": "Name",
+        "yesterday": "Yesterday",
+        "today": "Today",
+        "this-week": "This Week",
+        "this-month": "This Month",
+        "custom": "Custom"
+      }
+    },
+    "formsSubmissions": {
+      "title": "Forms & Submissions",
+      "latestActivity": "Latest Activity",
+      "viewDetailLastedTitle": "View Detail",
+      "button": {
+        "create": "Create a new form",
+        "viewSubmissions": "View submissions"
+      },
+      "columns": {
+        "websiteForms": "Website forms",
+        "status": "Status",
+        "name": "Full Name",
+        "email": "Business Email",
+        "phone": "Phone Number",
+        "message": "Message",
+        "form": "Form",
+        "date": "Date",
+        "label": "Label",
+        "selectAll": "Select All",
+        "actions": "Actions",
+        "no": "No.",
+        "time": "Time",
+        "attachedFiles": "Attached files",
+        "attached-files": "Attached files",
+        "source": "Source",
+        "phoneNumber": "Phone Number",
+        "title": "Your Title",
+        "role": "Your Role",
+        "company": "Company",
+        "inquiry": "Inquiry"
+      },
+      "label": {
+        "0": "Unspecified",
+        "1": "New",
+        "2": "Qualified",
+        "4": "Solve",
+        "3": "Unqualified",
+        "5": "Spam",
+        "sortBy": "Sort by",
+        "selectTheOrder": "Select the order",
+        "newestToOldest": "Newest to Oldest",
+        "oldestToNewest": "Oldest to Newest",
+        "time": "Time",
+        "name": "Name",
+        "aToZ": "A to Z",
+        "zToA": "Z to A",
+        "exportToXLS": "Export to XLS",
+        "exportToCSV": "Export to CSV",
+        "empty": "Empty",
+        "notEmpty": "Not empty",
+        "outOf": "out of",
+        "total": "Total",
+        "selected": "selected",
+        "startDate": "Start date",
+        "endDate": "End date",
+        "expiredDate": "Expired Date",
+        "level": "Level",
+        "function": "Function",
+        "location": "Location",
+        "back": "Back",
+        "contactUs": "Contact Us"
+      },
+      "time": {
+        "0": "Today",
+        "1": "Yesterday",
+        "2": "This week",
+        "3": "This month",
+        "4": "Custom"
+      },
+      "placeholder": {
+        "select": "Select"
+      },
+      "message": {
+        "turnOffNotification": "Turn off notifications of this form submissions?",
+        "turnOnNotification": "Get notifications of this form submissions via work email and Notification Center?"
+      },
+      "updateLabelOK": "Update label successfully!",
+      "exportOK": "Export successfully!",
+      "offOK": "Turn off the notification successfully!",
+      "onOK": "Turn on the notification successfully!"
+    }
+  },
+  "placeHolder": {
+    "enterUsername": "Username",
+    "enterPassword": "Password",
+    "select": "Select",
+    "enterName": "Enter name"
+  },
+  "login": {
+    "username": "User Name",
+    "password": "Password"
+  },
+  "message": {
+    "searchEmpty": "No result matches for your search."
+  },
+  "modal": {
+    "category": "category",
+    "titleApplyAll": "Are you sure to apply all ?",
+    "titleDelete": "Are you sure to delete this {{value}}?",
+    "titleShare": "Share link",
+    "post": "post",
+    "gallery": "album",
+    "portfolio": "portfolio"
+  },
+  "submissionInquiry": {
+    "partner": "Partner with Ban Vien",
+    "work": "Work with Ban Vien",
+    "support": "Need support",
+    "feedback": "Give feedbacks",
+    "esg_report": "Esg report"
+  },
+  "contactRole": {
+    "CEO": "CEO",
+    "COO": "COO",
+    "CFO": "CFO",
+    "CTO": "CTO",
+    "CMO": "CMO",
+    "CHRO": "CHRO",
+    "CDO": "CDO",
+    "CPO": "CPO",
+    "CHAIRMAN": "Chairman",
+    "DIRECTOR": "Director",
+    "FOUNDER": "Founder",
+    "PRESIDENT": "President",
+    "VICE_PRESIDENT": "Vice president",
+    "MANAGER": "Manager",
+    "TEAM_LEADER": "Team leader",
+    "ASSISTANT_MANAGER": "Assistant manager",
+    "EXECUTIVE": "Executive",
+    "CONSULTANT": "Consultant",
+    "OFFICER": "Officer",
+    "OTHERS": "Others"
+  },
+  "status": {
+    "public": "Public",
+    "private": "Private"
+  },
+  "clientInfoForm": {
+    "policyAgreement": "By clicking SUBMIT, you agree to {{companyName}}’s privacy policy and terms of use, and in particular, you expressly agree to the transfer of your personal information for the purposes described in that policy. ",
+    "contactInfo": "Contact Information"
+  },
+  "quotes": {
+    "submit": "Submit",
+    "form":{
+      "requestQuotes": "Request Quote",
+      "createQuotes": "Create Quotes",
+      "editQuotes": "Edit Quotes",
+      "viewQuotes": "View Quotes",
+      "createSuccess": "Quotes created successfully",
+      "updateSuccess": "Quotes updated successfully",
+      "deleteSuccess": "Quotes deleted successfully",
+      "confirmDelete": "Are you sure you want to delete this quotes?",
+      "cargoInfo": "Cargo Information",
+      "clientInfo": "Client Information",
+      "shipmentConfig": "Shipment Configuration",
+      "client": {
+        "label": "Client",
+        "placeholder": "Select client"
+      },
+      "isRequest": "Is Request",
+      "transportType": {
+        "label": "Transport Type",
+        "placeholder": "Select transport type",
+        "SEA": "Sea",
+        "AIR": "Air",
+        "ROAD": "Road",
+        "FCL": "Full Container Load",
+        "LCL": "Less than Container Load",
+        "ROAD_FCL": "Road FCL",
+        "ROAD_LCL": "Road LCL"
+      },
+      "shipmentMode": {
+        "label": "Shipment Mode",
+        "placeholder": "Select shipment mode",
+        "DOOR_TO_DOOR": "Door to Door",
+        "DOOR_TO_PORT": "Door to Port",
+        "PORT_TO_DOOR": "Port to Door",
+        "PORT_TO_PORT": "Port to Port"
+      },
+      "shipmentType": {
+        "label": "Shipment Type",
+        "placeholder": "Select shipment type",
+        "IMPORT": "Import",
+        "EXPORT": "Export",
+        "CROSS_TRADE": "Cross Trade"
+      },
+      "origin": {
+        "label": "Origin",
+        "placeholder": "Select origin"
+      },
+      "destination": {
+        "label": "Destination",
+        "placeholder": "Select destination"
+      },
+      "incoterm": {
+        "label": "Incoterm",
+        "placeholder": "Select incoterm"
+      },
+      "note": {
+        "label": "Note",
+        "placeholder": "Enter note"
+      },
+      "containerType": "Container Type",
+      "isFCL": "Full Container Load",
+      "cargoDetails": "Cargo Details",
+      "containers": "Containers",
+      "containerSpecs": {
+        "20DC": "20' Dry Container",
+        "40DC": "40' Dry Container",
+        "20RF": "20' Refrigerated",
+        "40RF": "40' Refrigerated",
+        "20HC": "20' High Cube",
+        "40HC": "40' High Cube",
+        "45HC": "45' High Cube"
+      },
+      "totalCont20dc": "20' DC",
+      "totalCont40dc": "40' DC",
+      "totalCont20rf": "20' RF",
+      "totalCont40rf": "40' RF",
+      "totalCont20hc": "20' HC",
+      "totalCont40hc": "40' HC",
+      "totalCont45hc": "45' HC",
+      "totalVolume": "Total Volume (CBM)",
+      "totalWeight": "Total Weight (KG)",
+      "add": "Add",
+      "remove": "Remove",
+      "atLeastOneContainer": "At least one container is required",
+      "success": "Thank you for reaching out to us! Your message has been received, and our team will get back to you shortly."
+    }
+  },
+  "client": {
+    "form":{
+      "accountInfo": "Account Information (Use this information to login)",
+      "createClient": "Create Client",
+      "editClient": "Edit Client",
+      "viewClient": "View Client",
+      "email": "Email",
+      "enterEmail": "Enter Email",
+      "name": "Name",
+      "enterName": "What name should we call you?",
+      "companyInfo": "Company Information",
+      "companyName": "Company Name",
+      "enterCompanyName": "Enter Company Name",
+      "companyAddress": "Company Address",
+      "enterCompanyAddress": "Enter Company Address",
+      "companyCity": "Company City",
+      "enterCompanyCity": "Enter Company City",
+      "companyCountry": "Company Country",
+      "enterCompanyCountry": "Enter Company Country",
+      "companyPhone": "Company Phone",
+      "enterCompanyPhone": "Enter Company Phone",
+      "companyEmail": "Company Email",
+      "enterCompanyEmail": "Enter Company Email",
+      "companyZipCode": "Company Zip Code",
+      "enterCompanyZipCode": "Enter Company Zip Code",
+      "companyTaxNumber": "Company Tax Number",
+      "enterCompanyTaxNumber": "Enter Company Tax Number",
+      "domestic": "Domestic",
+      "firstName": "First Name",
+      "enterFirstName": "Enter First Name",
+      "lastName": "Last Name",
+      "enterLastName": "Enter Last Name",
+      "phone": "Phone",
+      "enterPhone": "Enter Phone",
+      "position": "Position",
+      "enterPosition": "Enter Position",
+      "representativeInfo": "Representative Information",
+      "createSuccess": "Client created successfully",
+      "updateSuccess": "Client updated successfully",
+      "deleteSuccess": "Client deleted successfully",
+      "confirmDelete": "Are you sure you want to delete this client?"
+    }
+  },
+  "confirm": {
+    "ok": "OK"
+  }
+}

@@ -1,0 +1,33 @@
+export const dataAdminPortfolioCategory = {
+  en: {
+    name: 'Name',
+    slug: 'Slug',
+    post: 'Post',
+    location: 'Location',
+    shortDescription: 'Short Description',
+    createTitle: 'Add a new category portfolio',
+    editTitle: 'Edit category portfolio',
+    enterName: 'The name is how it appears on the website.',
+    enterSlug: 'The “slug” is the URL-friendly version of the name.',
+    enterDescription:
+      'The SEO description is brief text describing site content, ideally 50-300 characters long.',
+    parentId: 'Parent Category',
+    createTag: 'Add a new tag',
+    type: 'Type',
+  },
+  vi: {
+    name: 'Tên',
+    slug: 'Slug',
+    post: 'Post',
+    shortDescription: 'Mô tả ngắn',
+    createTitle: 'Thêm một danh mục đầu tư mới',
+    editTitle: 'Chỉnh sửa danh mục đầu tư',
+    enterName: 'Tên danh mục sẽ hiển thị trên website.',
+    enterSlug: 'Phiên bản tên URL',
+    enterDescription: 'Đoạn mô tả ngắn hiển thị SEO, dài 50 - 300 ký tự là tuyệt nhất',
+    createTag: 'Thêm một thẻ mới',
+    location: 'Địa điểm',
+    parentId: 'Danh mục cha',
+    type: 'Loại',
+  },
+};

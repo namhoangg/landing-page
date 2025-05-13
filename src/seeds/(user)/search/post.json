@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "BV TECH TALK – SUPER APP IN B2BC COMMERCE",
+      "subTitle": "Cooperate News",
+      "description": "Last week on 14th May 2021, Ban Vien successfully organized a workshop with topic"
+    },
+    {
+      "id": 2,
+      "title": "BV All Hands Meeting: \"Together we reach the new goal\"",
+      "subTitle": "Cooperate News",
+      "description": "Ban Vien is in an extremely fast-moving stage of developing with highly increasing of remote teams",
+      "status": "Ongoing"
+    },
+    {
+      "id": 3,
+      "title": "BV Tech Talk - Thundersoft IVI Solution",
+      "subTitle": "Cooperate News",
+      "description": "Ban Vien is proud to host the inaugural BV Tech Talks event with the participation of Mr. Weishan...",
+      "status": "Closed"
+    }
+  ]
+}

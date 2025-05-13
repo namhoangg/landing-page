@@ -1,0 +1,56 @@
+.swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-third__image {
+  overflow: hidden !important;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-custom-pagination {
+  position: absolute;
+  top: 50%;
+}
+
+.dot_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 2rem;
+  position: relative;
+}
+
+.dot_container::after {
+  content: '';
+  width: 100%;
+  border-bottom: 1px solid #d9d9d9;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 0;
+}
+.swiper-scrollbar {
+  margin-top: 2.5em;
+  border-radius: 1em;
+  background-color: #fff;
+  display: block !important;
+  width: 96px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 0.5em;
+}
+
+/* Customize the scrollbar thumb (drag handle) */
+.swiper-scrollbar-drag {
+  background-color: #f3c300;
+  height: 0.5em;
+  border-radius: 1em;
+}

@@ -1,0 +1,525 @@
+{
+  "httpErrCodes": {
+    "400": "400 - Có lỗi cú pháp trong yêu cầu.",
+    "401": "401 - Unauthorized",
+    "403": "403 - Forbidden",
+    "404": "404 - Không tìm thấy.",
+    "409": "409 - Yêu cầu xung đột với một số quy tắc đã được thiết lập",
+    "412": "412 - Chưa thiết lập cấu hình điều kiện.",
+    "413": "413 - Request entity too large",
+    "422": "422 - Validation Error!",
+    "500": "500 - Lỗi máy chủ nội bộ.",
+    "503": "503 - Dịch vụ không khả dụng."
+  },
+  "navigation": {
+    "home": "Trang chủ",
+    "services": {
+      "self": "Dịch vụ",
+      "main": "Dịch vụ",
+      "dc": "Tư vấn chuyển đổi số",
+      "sd": "Phát triển phần mềm",
+      "ddc": "Trung tâm phát triển ứng dụng",
+      "sts": "Dịch vụ kiểm thử phần mềm",
+      "solutions": "Các giải pháp",
+      "industries": "Các ngành nghề",
+      "resourcesCenter": "Trung tâm tài nguyên"
+    },
+    "solutions": {
+      "self": "Giải pháp",
+      "main": "Giải pháp",
+      "hcm": "Quản trị nhân sự",
+      "adas": "Hỗ trợ lái xe"
+    },
+    "industries": {
+      "self": "Lĩnh vực",
+      "main": "Lĩnh vực",
+      "automotive": "Tự động hóa",
+      "edutech": "Giáo dục",
+      "bankingFinance": "Tài chính - Ngân hàng",
+      "fintech": "Công nghệ tài chính",
+      "retails": "Bán lẻ",
+      "logistics": "Vận tải",
+      "smartIot": "Thiết bị IoT"
+    },
+    "resources": {
+      "self": "Tài nguyên",
+      "main": "Tài nguyên",
+      "caseStudies": "Nghiên cứu",
+      "insights": "Kiến thức",
+      "innovationHub": "Trung tâm sáng tạo"
+    },
+    "support": {
+      "support": "Hỗ trợ",
+      "privacyPolicy": "Chính sách bảo mật",
+      "isms": "ISMS",
+      "contactUs": "Liên hệ chúng tôi",
+      "faqs": "Câu hỏi thường gặp"
+    },
+    "company": {
+      "self": "Công ty",
+      "main": "Công ty",
+      "about": "Giới thiệu",
+      "culture": "Văn hóa",
+      "careers": "Tuyển dụng",
+      "contact": "Liên hệ",
+      "ourESG": "Our ESG",
+      "mediaCenter": {
+        "main": "Truyền thông",
+        "news": "Tin tức",
+        "events": "Sự kiện",
+        "gallery": "Thư viện ảnh",
+        "text": {
+          "updateLatestNews": "Luôn cập nhật những tin tức và cập nhật mới nhất từ Bản Viên"
+        }
+      }
+    },
+    "career": "Careers",
+    "contact": "Contact us",
+    "digital": "Digital Consulting",
+    "software": "Software Development",
+    "dedicated": "Dedicated Offshore Development",
+    "research": "Software Testing Services",
+    "automotive": "Automotive",
+    "banking": "Banking & Finance",
+    "education": "Education",
+    "retail": "Retail",
+    "computer": "Computer Network",
+    "newEvents": "News & Events",
+    "gallery": "Gallery",
+    "connectWithUs": "Kết nối với chúng tôi",
+    "PrivacyPolicy": "Chính sách bảo mật"
+  },
+  "pagination": {
+    "showTotal": "Hiển thị {{ from }} - {{ to }} trong {{ total }} mục"
+  },
+  "lang": {
+    "english": "Tiếng Anh",
+    "vietnamese": "Tiếng Việt"
+  },
+  "form": {
+    "required": "Trường này không được để trống!",
+    "errorFileSizeUpload": "Kích thước tệp tải lên quá lớn",
+    "errorFileNotSupport": "Phần mở rộng tập tin không được hỗ trợ",
+    "errorTimeEndGreaterTimeStart": "Thời gian kết thúc phải lớn hơn thời gian bắt đầu"
+  },
+  "button": {
+    "create": "Tạo mới",
+    "seeMore": "Xem thêm",
+    "loadMore": "Xem thêm",
+    "goToHome": "Trở về trang chủ",
+    "followUs": "Theo dõi chúng tôi",
+    "toGetHotJobFirst": "để nhận được việc làm nóng nhất đầu tiên",
+    "search": "Tìm kiếm...",
+    "clearFilter": "Đặt lại bộ lọc",
+    "cancel": "Hủy",
+    "confirm": "Xác nhận",
+    "save": "Lưu",
+    "submit": "Nộp",
+    "ok": "OK",
+    "publish": "Công bố",
+    "save&Draft": "Lưu & Nháp",
+    "save&Preview": "Save & Preview",
+    "applyFilter": "Apply Filter",
+    "partnerWithUs": "Hợp tác với chúng tôi",
+    "careerOppotunities": "Cơ hội nghề nghiệp",
+    "needSupport": "Cần sự hỗ trợ",
+    "addToMyCalendar": "Thêm vào Lịch của tôi",
+    "corporate_News": "Tin tức doanh nghiệp",
+    "blog": "Blog",
+    "recruitment_News": "Tin tuyển dụng",
+    "seeAll": "Xem tất cả",
+    "saveDraft": "Lưu bản nháp",
+    "addNewCategory": "Thêm danh mục mới",
+    "addNewPortfolio": "Thêm Portfolio mới",
+    "hide": "Ẩn",
+    "deSelect": "Hủy chọn ({{value}})",
+    "delete": "Xóa",
+    "filter": "Bộ lọc",
+    "addNewPost": "Thêm bài viết mới",
+    "yes": "Đồng ý",
+    "no": "Từ chối",
+    "addNewEvent": "Thêm sự kiện mới",
+    "addNewTag": "Thêm thẻ mới",
+    "sort": "Sắp xếp",
+    "apply": "Áp dụng",
+    "back": "Quay lại",
+    "chooseFiles": "Chọn tập tin",
+    "upload": "Tải lên",
+    "EDIT": "Chỉnh sửa",
+    "DELETE": "Xóa",
+    "SHARE": "Chia sẻ",
+    "customizeColumn": "Tùy chỉnh cột",
+    "export": "Xuất",
+    "addLabel": "Thêm nhãn"
+  },
+  "text": {
+    "areYouSureYouWantToCancel": "Bạn có chắc là bạn muốn hủy không?",
+    "chooseAFile": "Chọn một tập tin",
+    "orDropItHere": "hoặc thả nó vào đây",
+    "subscribeForUpdatingOurLatestNews": "Đăng ký để cập nhật tin tức mới nhất của chúng tôi!",
+    "subscribeForMoreinsights": "Đăng ký để biết thêm thông tin chi tiết",
+    "weHelpBusinessesAroundTheGlobe": "Mỗi ngày, chúng tôi giúp các doanh nghiệp trên toàn cầu đẩy nhanh quá trình chuyển đổi kỹ thuật số và xây dựng một tương lai linh hoạt, bền vững và toàn diện hơn."
+  },
+  "heading": {
+    "featuredEvents": "Sự kiện nổi bật",
+    "otherEvents": "Sự kiện khác",
+    "accompany": "Đồng hành cùng",
+    "theFutureWithUs": "tương lai với chúng tôi",
+    "hotline": "Đường dây nóng",
+    "connectWithUs": "Kết nối với chúng tôi",
+    "mediaEvents": "Truyền thông & Sự kiện",
+    "recruitment": "Tuyển Dụng",
+    "explore": "Khám phá",
+    "geography": "văn phòng của chúng tôi ở khu vực địa lý cụ thể",
+    "ourOffices": "văn phòng của chúng tôi",
+    "locations": "Địa điểm",
+    "customerService": "Dịch vụ khách hàng"
+  },
+  "newPress": {
+    "title": "Phòng tin tức của chúng tôi",
+    "text_banner": "Luôn cập nhật những tin tức và cập nhật mới nhất từ Bản Viên"
+  },
+  "gallery": {
+    "textTitle": "Gallery",
+    "content": "[DU LỊCH CÔNG TY 2022] NHỮNG KHOẢNH KHẮC ĐÁNG NHỚ CỦA TUYỆT VỜI BAN VIÊN",
+    "linkTitle": "Chia sẻ xã hội:"
+  },
+  "title": {
+    "topics": "Chủ đề",
+    "youMightAlsoLike": "Bạn cũng có thể thích",
+    "sortBy": "Sắp xếp theo",
+    "followUs": "Theo dõi chúng tôi"
+  },
+  "insight": {
+    "title": "Trí tuệ nhân tạo nâng cao trải nghiệm của khách hàng trong ngân hàng như thế nào"
+  },
+  "category": {
+    "title": "Luôn cập nhật những tin tức và cập nhật mới nhất từ Bản Viên"
+  },
+  "message": {
+    "searchEmpty": "Không có kết quả phù hợp với từ khóa của bạn."
+  },
+  "admin": {
+    "categories": {
+      "location": "Vị trí",
+      "title": "Danh mục",
+      "name": "Tên",
+      "slug": "Slug",
+      "post": "Bài viết",
+      "posts": "Bài viết",
+      "language": "Ngôn ngữ",
+      "languages": "Ngôn ngữ",
+      "time": "Thời gian",
+      "status": "Trạng thái",
+      "action": "Hành động",
+      "updateStateOK": "Cập nhật trạng thái thành công!",
+      "createOK": "Thêm danh mục thành công!",
+      "editOK": "Chỉnh sửa danh mục thành công!",
+      "deleteOK": "Xóa thành công!",
+      "shortDescription": "Mô tả ngắn",
+      "createTitle": "Thêm một danh mục mới",
+      "editTitle": "Chỉnh sửa danh mục",
+      "enterName": "Tên danh mục sẽ hiển thị trên website.",
+      "enterSlug": "Phiên bản tên URL",
+      "enterDescription": "Đoạn mô tả ngắn hiển thị SEO, dài 50 - 300 ký tự là tuyệt nhất",
+      "locations": {
+        "EVENT_LOCATION_UNSPECIFIED": "Hệ thống",
+        "EVENT_LOCATION_NEWS_PRESS": "Tin tức",
+        "EVENT_LOCATION_INSIGHTS": "Kiến thức",
+        "EVENT_LOCATION_ESGS": "ESGs",
+        "EVENT_LOCATION_INNOVATION_HUB": "Sáng tạo",
+        "EVENT_LOCATION_EVENTS": "Sự kiện"
+      }
+    },
+    "post": {
+      "title": "Bài viết",
+      "subTitle": "Tại Bản Viên, giá trị của chúng tôi nằm ở những kết nối có ý nghĩa trong mọi thông tin chúng tôi cung cấp.<br> Khi tạo ra nội dung có sức ảnh hưởng, chúng tôi đề cao tính xác thực và lòng nhân ái.",
+      "postTitle": "Tiêu đề",
+      "category": "Danh mục",
+      "location": "Vị trí",
+      "tag": "Thẻ",
+      "author": "Tác giả",
+      "language": "Ngôn ngữ",
+      "time": "Thời gian",
+      "status": "Trạng thái",
+      "action": "Hành động",
+      "createOK": "Thêm bài viết thành công!",
+      "editOK": "Chỉnh sửa bài viết thành công!",
+      "deleteOK": "Xóa bài viết thành công!",
+      "updateStateOK": "Cập nhật trạng thái thành công!",
+      "statuses": {
+        "POST_STATE_PUBLIC": "Công khai",
+        "POST_STATE_DRAFT": "Nháp",
+        "POST_STATE_PRIVATE": "Riêng tư",
+        "POST_STATE_DELETED": "Đã xóa"
+      },
+      "options": {
+        "1": "Newsroom",
+        "2": "Insights",
+        "3": "ESG",
+        "4": "Innovation Hub"
+      }
+    },
+    "events": {
+      "title": "Tất cả bài viết",
+      "postTitle": "Sự kiện",
+      "activity": "Hoạt động",
+      "startDate": "Ngày bắt đầu",
+      "endDate": "Ngày kết thúc",
+      "location": "Nơi diễn ra",
+      "tag": "Thẻ",
+      "author": "Tác giả",
+      "language": "Ngôn ngữ",
+      "time": "Thời gian",
+      "status": "Trạng thái",
+      "action": "Hành động",
+      "createOK": "Thêm bài viết thành công!",
+      "editOK": "Chỉnh sửa bài viết thành công!",
+      "deleteOK": "Xóa thành công!",
+      "updateStateOK": "Cập nhật trạng thái thành công!",
+      "statuses": {
+        "EVENT_STATE_PUBLIC": "Công khai",
+        "EVENT_STATE_DRAFT": "Nháp",
+        "EVENT_STATE_PRIVATE": "Riêng tư",
+        "EVENT_STATE_DELETED": "Đã xóa"
+      },
+      "eventStatuses": {
+        "EVENT_STATUS_UPCOMING": "Sắp diễn ra",
+        "EVENT_STATUS_ONGOING": "Đang diễn ra",
+        "EVENT_STATUS_CLOSED": "Đã kết thúc"
+      }
+    },
+    "tags": {
+      "title": "Thẻ",
+      "name": "Tên",
+      "slug": "Slug",
+      "result": "Kết quả",
+      "time": "Thời gian",
+      "highlight": "Nổi bật",
+      "createdBy": "Người tạo",
+      "createOK": "Thêm thẻ thành công!",
+      "deleteOK": "Xóa thành công!",
+      "shortDescription": "Mô tả ngắn",
+      "createTitle": "Thêm một thẻ mới",
+      "enterName": "Tên thẻ sẽ hiển thị trên website.",
+      "enterSlug": "Phiên bản tên URL",
+      "enterDescription": "Đoạn mô tả ngắn hiển thị SEO, dài 50 - 300 ký tự là tuyệt nhất"
+    },
+    "portfolios": {
+      "title": "Danh mục Portfolio",
+      "category": "Danh mục",
+      "slug": "Đường dẫn",
+      "portfolio": "Danh mục đầu tư",
+      "author": "Tác giả",
+      "language": "Ngôn ngữ",
+      "time": "Thời gian",
+      "status": "Trạng thái",
+      "action": "Hành động",
+      "allPortfolio": "Tất cả danh mục đầu tư",
+      "tag": "Thẻ",
+      "name": "Tên",
+      "type": "Loại",
+      "createOK": "Thêm danh mục đầu tư thành công!",
+      "updateStateOK": "Cập nhật trạng thái thành công!",
+      "editOK": "Chỉnh sửa danh mục đầu tư thành công!",
+      "deleteOK": "Xóa danh muc đầu tư thành công!",
+      "languages": {
+        "ENGLISH": "Tiếng Anh",
+        "VIETNAMESE": "Tiếng Việt"
+      },
+      "statuses": {
+        "PUBLISHED": "Công khai",
+        "HIDDEN": "Bản nháp"
+      },
+      "option": {
+        "case_studies": "Case study",
+        "esg_report": "Esg report",
+        "innovation_hub": "Innovation hub",
+        "unspecified": "Không xác định",
+        "caseStudy": "Case study",
+        "esgReport": "Esg report",
+        "innovationHub": "Innovation hub"
+      }
+    },
+    "gallery": {
+      "title": {
+        "gallery": "Thư viện ảnh",
+        "shareLink": "Chia sẻ đường link",
+        "deleteAlbum": "Bạn có chắc chắn xóa album này không?",
+        "addANewAlbum": "Thêm một album mới",
+        "editAlbum": "Chỉnh sửa album",
+        "deleteImage": "Bạn có chắc chắn xóa hình ảnh này?",
+        "createOK": "Thêm album thành công!",
+        "updateOK": "Cập nhật album thành công!",
+        "deleteOK": "Xóa album thành công!"
+      },
+      "button": {
+        "addANewAlbum": "Thêm một album mới"
+      },
+      "label": {
+        "sortBy": "Sắp xếp theo",
+        "selectTheOrder": "Chọn thứ tự",
+        "timeCreated": "Thời gian được tạo",
+        "startDate": "Ngày bắt đầu",
+        "endDate": "Ngày kết thúc",
+        "name": "Tên",
+        "albumCover": "Bìa album",
+        "organizedBy": "Tổ chức theo",
+        "author": "Tác giả",
+        "created": "Được tạo",
+        "modifiedBy": "Được sửa đổi bởi",
+        "lastUpdated": "Cập nhật mới nhất",
+        "slug": "Slug"
+      },
+      "placeholder": {
+        "sortBy": "Sort By",
+        "select": "Select"
+      },
+      "option": {
+        "newestToOldest": "Newest To Oldest",
+        "oldestToNewest": "Oldest To Newest",
+        "aToZ": "A To Z",
+        "zToA": "Z To A",
+        "time": "Time",
+        "name": "Name",
+        "yesterday": "Yesterday",
+        "today": "Today",
+        "this-week": "This Week",
+        "this-month": "This Month",
+        "custom": "Custom"
+      }
+    },
+    "formsSubmissions": {
+      "title": "Biểu mẫu & Bài nộp",
+      "latestActivity": "Hoạt động mới nhất",
+      "viewDetailLastedTitle": "Xem chi tiết",
+      "button": {
+        "create": "Tạo một biểu mẫu mới",
+        "viewSubmissions": "Xem bài nộp"
+      },
+      "columns": {
+        "websiteForms": "Biểu mẫu trang web",
+        "status": "Trạng thái",
+        "name": "Họ và tên",
+        "email": "Email",
+        "phone": "Số điện thoại",
+        "message": "Tin nhắn",
+        "form": "Hình thức",
+        "date": "Ngày",
+        "label": "Nhãn",
+        "selectAll": "Chọn tất cả",
+        "actions": "Hành động",
+        "no": "Số thứ tự",
+        "time": "Thời gian",
+        "attachedFiles": "File đính kèm",
+        "source": "Nguồn",
+        "phoneNumber": "Số điện thoại",
+        "title": "Tiêu đề",
+        "role": "Vai trò",
+        "company": "Công ty",
+        "inquiry": "Yêu cầu"
+      },
+      "label": {
+        "0": "Không xác định",
+        "1": "Mới",
+        "2": "Đạt tiêu chuẩn",
+        "3": "Gỡ rối",
+        "4": "Không đủ tiêu chuẩn",
+        "5": "Thư rác",
+        "sortBy": "Sắp xếp theo",
+        "selectTheOrder": "Chọn thứ tự",
+        "newestToOldest": "Mới nhất đến cũ nhất",
+        "oldestToNewest": "Cũ nhất đến mới nhất",
+        "time": "Thời gian",
+        "name": "Tên",
+        "aToZ": "A đến Z",
+        "zToA": "Z đến A",
+        "exportToXLS": "Xuất sang XLS",
+        "exportToCSV": "Xuất sang CSV",
+        "empty": "Trống",
+        "notEmpty": "Không trống",
+        "outOf": "ra khỏi",
+        "total": "Tổng cộng",
+        "selected": "đã chọn",
+        "startDate": "Start date",
+        "endDate": "Ngày cuối",
+        "expiredDate": "Ngày hết hạn",
+        "level": "Mức độ",
+        "function": "Chức năng",
+        "location": "Vị trí",
+        "back": "Trở lại",
+        "contactUs": "Liên hệ"
+      },
+      "time": {
+        "0": "Hôm nay",
+        "1": "Hôm qua",
+        "2": "Tuần này",
+        "3": "Tháng này",
+        "4": "Tùy chỉnh"
+      },
+      "placeholder": {
+        "select": "Lựa chọn"
+      },
+      "message": {
+        "turnOffNotification": "Tắt thông báo về việc gửi biểu mẫu này?",
+        "turnOnNotification": "Nhận thông báo về việc gửi biểu mẫu này qua email công việc và Trung tâm thông báo?"
+      },
+      "updateLabelOK": "Cập nhật nhãn thành công!",
+      "exportOK": "Xuất dữ liệu thành công!",
+      "offOK": "Tắt thông báo thành công!",
+      "onOK": "Bật thông báo thành công!"
+    }
+  },
+  "placeHolder": {
+    "enterUsername": "Tên đăng nhập",
+    "enterPassword": "Mật khẩu",
+    "select": "Chọn",
+    "enterName": "Nhập tên"
+  },
+  "login": {
+    "username": "User Name",
+    "password": "Password"
+  },
+  "modal": {
+    "category": "Danh mục",
+    "titleApplyAll": "Bạn có chắc chắn áp dụng tất cả ?",
+    "titleDelete": "Bạn có chắc chắn muốn xóa {{value}}?",
+    "titleShare": "Chia sẻ đường dẫn",
+    "post": "bài viết",
+    "gallery": "album",
+    "portfolio": "danh mục đầu tư"
+  },
+  "submissionInquiry": {
+    "partner": "Partner with Ban Vien",
+    "work": "Work with Ban Vien",
+    "support": "Need support",
+    "feedback": "Give feedbacks",
+    "esg_report": "Esg report"
+  },
+  "contactRole": {
+    "CEO": "CEO",
+    "COO": "COO",
+    "CFO": "CFO",
+    "CTO": "CTO",
+    "CMO": "CMO",
+    "CHRO": "CHRO",
+    "CDO": "CDO",
+    "CPO": "CPO",
+    "CHAIRMAN": "Chairman",
+    "DIRECTOR": "Director",
+    "FOUNDER": "Founder",
+    "PRESIDENT": "President",
+    "VICE_PRESIDENT": "Vice president",
+    "MANAGER": "Manager",
+    "TEAM_LEADER": "Team leader",
+    "ASSISTANT_MANAGER": "Assistant manager",
+    "EXECUTIVE": "Executive",
+    "CONSULTANT": "Consultant",
+    "OFFICER": "Officer",
+    "OTHERS": "Others"
+  },
+  "status": {
+    "public": "Công khai",
+    "private": "Riêng tư"
+  }
+}
