@@ -89,7 +89,6 @@ export default function QuotesForm({ onClose }: Props) {
   } = useModal();
 
   const onSubmit = (data: QuoteRequestCreate) => {
-    console.log(data);
     setQuoteData(data);
     handleOpenAddClient();
   };

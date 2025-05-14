@@ -37,7 +37,7 @@ export default function ContactForm({ form, onSubmit, type = 'create' }: IFormPr
           <br />
 
           {/* Account Information */}
-          <Collapse style={{ marginBottom: '20px' }}>
+          <Collapse style={{ marginBottom: '20px' }} defaultActiveKey={['1']}>
             <Panel header={t('client.form.accountInfo') || "Account Information"} key="1">
               <Row gutter={[16, 16]}>
                 <Col span={24} md={12} lg={8}>
