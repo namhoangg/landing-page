@@ -21,16 +21,24 @@ import {
   Title,
   Wrapper,
 } from '@/components';
-import { useGetOptionSelect, useHandleError, useModal } from '@/hooks';
+import { useGetOptionSelect, useHandleError, useModal, useFormat } from '@/hooks';
 import { createQuoteRequestFormSchema, getContactFormSchema, TContactForm } from '@/schemas';
-import { useCreateClientMutation, useCreateQuotesMutation, useListUnlocoQuery } from '@/services';
+import {
+  useCreateClientMutation,
+  useCreateQuotesMutation,
+  useListContainerQuery,
+  useListGoodKindQuery,
+  useListServiceChargeQuery,
+  useListUnlocoQuery,
+} from '@/services';
 import { theme } from '@/styles';
-import { Button, Col, Collapse, Row } from 'antd';
-import { uniqueId } from 'lodash';
+import { Button, Col, Collapse, Row, Tooltip } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
 import React, { useState } from 'react';
 import { enumWithoutNumberToArray } from '@/utils';
+import moment from 'moment';
+import { DatePicker } from '@/components';
 import {
   Client,
   Incoterm,
@@ -42,6 +50,7 @@ import {
   TransportTypeLabel,
   Unloco,
 } from '@/types';
+import dayjs from 'dayjs';
 
 interface Props {
   onClose?: () => void;
@@ -54,17 +63,7 @@ export default function QuotesForm({ onClose }: Props) {
   // @ts-ignore
   const form = useForm<QuoteRequestCreate>({
     mode: 'all',
-    defaultValues: {
-      cargoVolume: {
-        totalCont20dc: 0,
-        totalCont40dc: 0,
-        totalCont20rf: 0,
-        totalCont40rf: 0,
-        totalCont20hc: 0,
-        totalCont40hc: 0,
-        totalCont45hc: 0,
-      },
-    },
+    defaultValues: {},
     resolver: createQuoteRequestFormSchema(t, isFCL) as unknown as Resolver<
       QuoteRequestCreate,
       any
@@ -73,8 +72,35 @@ export default function QuotesForm({ onClose }: Props) {
 
   const onErr = useHandleError();
   const [submitForm, { isLoading: isCreatingQuote }] = useCreateQuotesMutation();
+  const formatDate = useFormat('YYYY-MM-DD');
+
+  const { data: dataUnloco, isLoading: isLoadingUnloco } = useListUnlocoQuery(
+    {
+      pagingIgnore: true,
+    },
+    { refetchOnMountOrArgChange: true },
+  );
+
+  const { data: dataGoodKind, isLoading: isLoadingGoodKind } = useListGoodKindQuery(
+    {
+      pagingIgnore: true,
+    },
+    { refetchOnMountOrArgChange: true },
+  );
 
   const [quoteData, setQuoteData] = useState<QuoteRequestCreate>({} as QuoteRequestCreate);
+  const { data: dataContainerType } = useListContainerQuery(
+    {},
+    { refetchOnMountOrArgChange: true },
+  );
+
+  const { data: dataServiceCharges } = useListServiceChargeQuery(
+    {
+      page: 0,
+      size: 1000,
+    },
+    { refetchOnMountOrArgChange: true },
+  );
 
   const {
     isOpen: isOpenConfirm,
@@ -113,13 +139,6 @@ export default function QuotesForm({ onClose }: Props) {
   });
 
   const { Panel } = Collapse;
-
-  const transportTypeOptions = enumWithoutNumberToArray(TransportTypeLabel).map((item) => ({
-    key: item.id,
-    label: item.value,
-    value: item.key,
-    render: () => item.value,
-  }));
 
   const shipmentTypeOptions = enumWithoutNumberToArray(ShipmentTypeLabel)
     .map((item) => ({
@@ -212,78 +231,30 @@ export default function QuotesForm({ onClose }: Props) {
                           <Col
                             span={24}
                             md={12}
-                            lg={8}
+                            lg={4}
                           >
-                            <Select
-                              options={transportTypeOptions}
+                            <Input
                               name='transportType'
                               label={t('quotes.form.transportType.label')}
                               placeholder={t('quotes.form.transportType.placeholder')}
-                              required
-                              onChange={(value) => {
-                                setIsFCL(value === TransportType.ROAD_FCL);
-                                form.setValue(
-                                  'cargoVolume.isFCL',
-                                  value === TransportType.ROAD_FCL,
-                                );
-                              }}
-                              showSearch
+                              disabled
+                              value={TransportType.ROAD_FCL}
                             />
                           </Col>
                           <Col
                             span={24}
                             md={12}
-                            lg={8}
+                            lg={10}
                           >
                             <Select
-                              options={shipmentTypeOptions}
-                              name='shipmentType'
-                              label={t('quotes.form.shipmentType.label')}
-                              placeholder={t('quotes.form.shipmentType.placeholder')}
-                              required
-                              showSearch
-                            />
-                          </Col>
-                          <Col
-                            span={24}
-                            md={12}
-                            lg={8}
-                          >
-                            <Select
-                              options={shipmentModeOptions}
-                              name='shipmentMode'
-                              label={t('quotes.form.shipmentMode.label')}
-                              placeholder={t('quotes.form.shipmentMode.placeholder')}
-                              required
-                              showSearch
-                            />
-                          </Col>
-                          <Col
-                            span={24}
-                            md={12}
-                            lg={8}
-                          >
-                            <Select
-                              options={incotermOptions}
-                              name='incoterm'
-                              label={t('quotes.form.incoterm.label')}
-                              placeholder={t('quotes.form.incoterm.placeholder')}
-                              required
-                              showSearch
-                            />
-                          </Col>
-                          <Col
-                            span={24}
-                            md={12}
-                            lg={8}
-                          >
-                            <Select
-                              options={originPortData.map((item) => ({
-                                key: `origin-${item.id}`,
-                                label: `${item.displayName}`,
-                                value: item.id,
-                                render: () => `${item.displayName}`,
-                              }))}
+                              options={(dataUnloco?.payload?.data ?? [])
+                                .filter((item) => item.id !== form.watch('destinationId'))
+                                .map((item) => ({
+                                  key: `origin-${item.id}`,
+                                  label: `${item.displayName}`,
+                                  value: item.id,
+                                  render: () => `${item.displayName}`,
+                                }))}
                               name='originId'
                               label={t('quotes.form.origin.label')}
                               placeholder={t('quotes.form.origin.placeholder')}
@@ -296,15 +267,17 @@ export default function QuotesForm({ onClose }: Props) {
                           <Col
                             span={24}
                             md={12}
-                            lg={8}
+                            lg={10}
                           >
                             <Select
-                              options={desPortData.map((item) => ({
-                                key: `destination-${item.id}`,
-                                label: `${item.displayName}`,
-                                value: item.id,
-                                render: () => `${item.displayName}`,
-                              }))}
+                              options={(dataUnloco?.payload?.data ?? [])
+                                .filter((item) => item.id !== form.watch('originId'))
+                                .map((item) => ({
+                                  key: `destination-${item.id}`,
+                                  label: `${item.displayName}`,
+                                  value: item.id,
+                                  render: () => `${item.displayName}`,
+                                }))}
                               name='destinationId'
                               label={t('quotes.form.destination.label')}
                               placeholder={t('quotes.form.destination.placeholder')}
@@ -312,6 +285,173 @@ export default function QuotesForm({ onClose }: Props) {
                               loading={isFetchingDesPorts}
                               onSearch={handleSearchDesPort}
                               showSearch
+                            />
+                          </Col>
+                          <Col
+                            span={24}
+                            md={12}
+                            lg={4}
+                          >
+                            <Select
+                              options={(dataGoodKind ?? []).map((item) => ({
+                                key: `goodKind-${item.id}`,
+                                label: `${item.name}`,
+                                value: item.id,
+                                render: () => `${item.name}`,
+                              }))}
+                              name='goodKindId'
+                              label={t('quotes.form.goodKind.label')}
+                              placeholder={t('quotes.form.goodKind.placeholder')}
+                              required
+                            />
+                          </Col>
+                          <Col
+                            span={24}
+                            md={12}
+                            lg={10}
+                          >
+                            <DatePicker
+                              allowClear
+                              name='etd'
+                              placeholder={t('quotes.form.etd.placeholder')}
+                              disabledDate={(current) =>
+                                current && current < dayjs().startOf('day')
+                              }
+                              format={formatDate}
+                              label={t('quotes.form.etd.label')}
+                              required
+                              onChange={(value) => {
+                                console.log('ETD onChange value:', value);
+
+                                // Check if value exists before processing
+                                if (value) {
+                                  // Use dayjs consistently to avoid conversion issues
+                                  form.setValue('etd', dayjs(value).endOf('day'));
+
+                                  console.log(
+                                    'ETD set to:',
+                                    dayjs(value).format('YYYY-MM-DD HH:mm:ss'),
+                                  );
+                                } else {
+                                  // Handle clearing the field
+                                  form.setValue('etd', null);
+                                }
+                                // Clear ETA when ETD changes
+                                form.setValue('eta', null);
+                              }}
+                            />
+                          </Col>
+                          <Col
+                            span={24}
+                            md={12}
+                            lg={10}
+                          >
+                            <DatePicker
+                              allowClear
+                              name='eta'
+                              placeholder={t('quotes.form.eta.placeholder')}
+                              disabledDate={(current) => {
+                                const etd = form.watch('etd');
+                                return Boolean(
+                                  (current && current < dayjs().startOf('day')) ||
+                                    (etd && current < dayjs(etd)),
+                                );
+                              }}
+                              format={formatDate}
+                              label={t('quotes.form.eta.label')}
+                              required
+                              onChange={(value) => {
+                                console.log('ETA onChange value:', value);
+
+                                // Check if value exists before processing
+                                if (value) {
+                                  // Use dayjs consistently to avoid conversion issues
+                                  form.setValue('eta', dayjs(value).endOf('day'));
+
+                                  console.log(
+                                    'ETA set to:',
+                                    dayjs(value).format('YYYY-MM-DD HH:mm:ss'),
+                                  );
+                                } else {
+                                  // Handle clearing the field
+                                  form.setValue('eta', null);
+                                }
+                              }}
+                            />
+                          </Col>
+                          <Col
+                            span={24}
+                            md={12}
+                            lg={24}
+                          >
+                            <Select
+                              options={(dataContainerType ?? [])
+                                .filter((item) => {
+                                  const goodKind = dataGoodKind?.find(
+                                    (g) => g.id === form.watch('goodKindId'),
+                                  );
+                                  if (goodKind?.isRefrigerated) {
+                                    return item.isRefrigerated;
+                                  }
+                                  return true;
+                                })
+                                .map((item) => {
+                                  return {
+                                    key: `containerType-${item.id}`,
+                                    label: item.name,
+                                    value: item.id,
+                                    render: () => `${item.name}`,
+                                  };
+                                })}
+                              name='containerTypeIds'
+                              label={t('quotes.form.containerType.label')}
+                              placeholder={t('quotes.form.containerType.placeholder')}
+                              mode='multiple'
+                              required
+                              disabled={!form.watch('goodKindId')}
+                            />
+                          </Col>
+                          <Col
+                            span={24}
+                            md={12}
+                            lg={24}
+                          >
+                            <Select
+                              options={(dataServiceCharges?.payload?.data ?? []).map((item) => ({
+                                key: `serviceCharge-${item.id}`,
+                                label: item?.chargeType?.name,
+                                value: item.id,
+                                render: () => (
+                                  <Tooltip
+                                    title={item?.chargeType?.description}
+                                    placement='right'
+                                  >
+                                    <span style={{ fontWeight: 'bold' }}>
+                                      {item?.chargeType?.name}
+                                    </span>{' '}
+                                    ({t('quotes.form.serviceCharge.calculateBy')}:{' '}
+                                    {item?.chargeType?.calculationType}) [
+                                    {item?.provider?.name ?? 'FreightFlex'}]
+                                  </Tooltip>
+                                ),
+                              }))}
+                              name='serviceChargeIds'
+                              label={t('quotes.form.serviceCharge.label')}
+                              placeholder={t('quotes.form.serviceCharge.placeholder')}
+                              mode='multiple'
+                            />
+                          </Col>
+                          <Col
+                            span={24}
+                            md={12}
+                            lg={24}
+                          >
+                            <Input
+                              type='textarea'
+                              rows={2}
+                              label={t('quotes.form.goodDescription.label')}
+                              name='goodDescription'
+                              placeholder={t('quotes.form.goodDescription.placeholder')}
                             />
                           </Col>
                           <Col
@@ -328,91 +468,6 @@ export default function QuotesForm({ onClose }: Props) {
                             />
                           </Col>
                         </Row>
-                      </Panel>
-                    </Collapse>
-
-                    {/* Cargo Information */}
-                    <Collapse
-                      defaultActiveKey={['2']}
-                      style={{ marginBottom: '20px' }}
-                    >
-                      <Panel
-                        header={t('quotes.form.cargoInfo') || 'Cargo Information'}
-                        key='2'
-                      >
-                        {isFCL ? (
-                          <Row gutter={[16, 16]}>
-                            <Col span={6}>
-                              <Input
-                                name='cargoVolume.totalCont20dc'
-                                label={t('quotes.form.totalCont20dc')}
-                                type='number'
-                              />
-                            </Col>
-                            <Col span={6}>
-                              <Input
-                                name='cargoVolume.totalCont40dc'
-                                label={t('quotes.form.totalCont40dc')}
-                                type='number'
-                              />
-                            </Col>
-                            <Col span={6}>
-                              <Input
-                                name='cargoVolume.totalCont20rf'
-                                label={t('quotes.form.totalCont20rf')}
-                                type='number'
-                              />
-                            </Col>
-                            <Col span={6}>
-                              <Input
-                                name='cargoVolume.totalCont40rf'
-                                label={t('quotes.form.totalCont40rf')}
-                                type='number'
-                              />
-                            </Col>
-                            <Col span={6}>
-                              <Input
-                                name='cargoVolume.totalCont20hc'
-                                label={t('quotes.form.totalCont20hc')}
-                                type='number'
-                              />
-                            </Col>
-                            <Col span={6}>
-                              <Input
-                                name='cargoVolume.totalCont40hc'
-                                label={t('quotes.form.totalCont40hc')}
-                                type='number'
-                              />
-                            </Col>
-                            <Col span={6}>
-                              <Input
-                                name='cargoVolume.totalCont45hc'
-                                label={t('quotes.form.totalCont45hc')}
-                                type='number'
-                              />
-                            </Col>
-                          </Row>
-                        ) : (
-                          <Row gutter={[16, 16]}>
-                            <Col span={12}>
-                              <Input
-                                placeholder={t('quotes.form.totalVolume')}
-                                name='cargoVolume.totalVolume'
-                                maxLength={15}
-                                label={t('quotes.form.totalVolume')}
-                                type={'number'}
-                              />
-                            </Col>
-                            <Col span={12}>
-                              <Input
-                                name='cargoVolume.totalWeight'
-                                label={t('quotes.form.totalWeight')}
-                                placeholder={t('quotes.form.totalWeight')}
-                                type={'number'}
-                              />
-                            </Col>
-                          </Row>
-                        )}
                       </Panel>
                     </Collapse>
 

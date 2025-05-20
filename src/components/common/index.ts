@@ -35,3 +35,4 @@ export * from './NewsCard';
 export * from './TextDivider';
 export * from './Label';
 export * from './Icons';
+export * from './DatePicker';

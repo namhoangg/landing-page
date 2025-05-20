@@ -545,8 +545,44 @@
   },
   "quotes": {
     "submit": "Submit",
-    "form":{
-      "requestQuotes": "Request Quote",
+    "form": {
+      "success": "Quote request sent successfully",
+      "selectProvider": {
+        "label": "Please select one provider from the list below:",
+        "title": "Select Provider"
+      },
+      "defaultServiceChargePriceMarkup": {
+        "label": "Default Service Charge Price Markup (%) - Default: 10%",
+        "placeholder": "Enter default service charge price markup"
+      },
+      "serviceCharge": {
+        "label": "Service Charge",
+        "placeholder": "Select service charge",
+        "calculateBy": "Calculate By"
+      },
+      "reason": {
+        "label": "Reason",
+        "placeholder": "Enter reason"
+      },
+      "price": "Price",
+      "actions": "Actions",
+      "chargeName": "Charge Name",
+      "pleaseFillAllRequiredFields": "Please fill all required fields",
+      "otherCharges": "Other Charges",
+      "profitRate": {
+        "label": "Profit Rate",
+        "placeholder": "Enter profit rate (%)"
+      },
+      "provider": {
+        "label": "Provider",
+        "placeholder": "Select provider",
+        "chosen": "Chosen Provider"
+      },
+      "totalBasePrice": "Total Base Price",
+      "totalPrice": "Final Price",
+      "quotePricing": "Quote Pricing",
+      "basePrice": "Base Price",
+      "quantity": "Quantity",
       "createQuotes": "Create Quotes",
       "editQuotes": "Edit Quotes",
       "viewQuotes": "View Quotes",
@@ -604,7 +640,10 @@
         "label": "Note",
         "placeholder": "Enter note"
       },
-      "containerType": "Container Type",
+      "containerType": {
+        "label": "Container Type",
+        "placeholder": "Select container type"
+      },
       "isFCL": "Full Container Load",
       "cargoDetails": "Cargo Details",
       "containers": "Containers",
@@ -629,7 +668,26 @@
       "add": "Add",
       "remove": "Remove",
       "atLeastOneContainer": "At least one container is required",
-      "success": "Thank you for reaching out to us! Your message has been received, and our team will get back to you shortly."
+      "validUntil": {
+        "label": "Valid Until (Default: 1 week)",
+        "placeholder": "Select valid until date"
+      },
+      "goodKind": {
+        "label": "Good Kind",
+        "placeholder": "Select good kind"
+      },
+      "goodDescription": {
+        "label": "Good Description",
+        "placeholder": "Enter good description"
+      },
+      "etd": {
+        "label": "ETD (Estimated Time of Departure) ",
+        "placeholder": "Select ETD date"
+      },
+      "eta": {
+        "label": "ETA (Estimated Time of Arrival)",
+        "placeholder": "Select ETA date"
+      }
     }
   },
   "client": {

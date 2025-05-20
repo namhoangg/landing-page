@@ -29,18 +29,52 @@ export interface Quotes {
 }
 
 export interface QuoteRequestCreate {
-  clientId: number;
-  isRequest: boolean;
-  transportType: string;
-  shipmentMode: string;
-  shipmentType: string;
+  id?: number;
+  clientId?: number;
   originId: number;
   destinationId: number;
-  incoterm: string;
-  note: string;
-
-  cargoVolume: CargoVolumeCreateDto;
+  note?: string;
+  isDraft?: boolean;
+  goodKindId: number;
+  etd: string;
+  eta: string;
+  containerTypeIds: (string | number)[];
+  serviceChargeIds: (string | number)[];
+  // For quote pricing
+  quoteRequestId?: number;
+  providerId: number;
+  validUntil: string;
+  staffNote?: string;
+  defaultServiceChargePriceMarkup?: number;
+  serviceChargeMarkup?: ServiceChargeMarkup[];
+  cargoChargeMarkup?: CargoChargeMarkup[];
+  reason?: string;
 }
+
+export interface CargoChargePrice {
+  containerTypeId: string | number;
+  basePrice: string | number;
+  currencyId: string | number;
+  markup: string | number;
+}
+
+export interface CargoChargeMarkup {
+  providerId: string | number;
+  cargoChargeMarkupItems: CargoChargeMarkupItem[];
+}
+
+export interface CargoChargeMarkupItem {
+  containerTypeId: string | number;
+  markup: string | number;
+}
+
+export interface ServiceChargeMarkup {
+  serviceChargeId: string | number;
+  markup: string | number;
+  basePrice: string | number;
+  currencyId: string | number;
+}
+
 
 export interface CargoVolumeCreateDto {
   isFCL: boolean;
